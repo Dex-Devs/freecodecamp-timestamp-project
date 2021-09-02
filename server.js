@@ -38,17 +38,17 @@ app.get('/api/:date', (req, res) => {
 
   const date = req.params.date;
 
-  /* // for validation
+  // for validation
   let unixRegEx = /^\d+$/;
-  let dateStrRegEx = /\b(\d{4})-(\d{2})-(\d{2})\b/; */
+  let dateStrRegEx = /\b(\d{4})-(\d{2})-(\d{2})\b/;
 
   let parsedDate = (new Date(date) == "Invalid Date") ? new Date(parseInt(date)) : new Date(date);
   
-  /* // validate format
-  let isDateFormatValid = unixRegEx.test(date) || dateStrRegEx.test(date); */
+  // validate format
+  let isDateFormatValid = unixRegEx.test(date) || dateStrRegEx.test(date);
 
   if(parsedDate == "Invalid Date"
-    /* || !isDateFormatValid */
+    || !isDateFormatValid
   ) {
     res.json({error: 'Invalid date'});
   } else {

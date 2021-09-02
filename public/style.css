@@ -26,6 +26,10 @@ hr {
 	margin-top: 40px;
 }
 
+.footer span {
+	font-weight: bolder;
+}
+
 code {
   font-family: monospace;
   padding: 2px;
